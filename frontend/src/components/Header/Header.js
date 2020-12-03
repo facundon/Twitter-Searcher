@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import './styles.scss'
 
 const Header = () => {
@@ -10,8 +11,8 @@ const Header = () => {
             </a>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
-                    <a className="nav-link">Buscador</a>
-                    <a className="nav-link">Historial</a>
+                    <Link className="nav-link" to="/buscador">Buscador</Link>
+                    <Link className="nav-link" to="/historial">Historial</Link>
                 </div>
             </div>
         </nav>
