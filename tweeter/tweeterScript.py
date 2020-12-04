@@ -1,6 +1,6 @@
 import tweepy
 import json
-from EjercicioMauro.settings import TWITTER_API_KEYS, TWITTER_MAX_FETCH
+from TwitterSearcher.settings import TWITTER_API_KEYS, TWITTER_MAX_FETCH
 
 
 auth = tweepy.OAuthHandler(TWITTER_API_KEYS["consumer_key"], TWITTER_API_KEYS["consumer_secret"])
