@@ -11,21 +11,13 @@ class HistoryPage extends Component {
         getTerms: PropTypes.func.isRequired,
     }
 
-    state = {
-        options: {
-            weekday: 'long',
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric'}
-    };
-
     componentDidMount() {
         this.props.getTerms()
     }
 
     formatDate(raw_date) {
         const date = new Date(raw_date)
-        return date.toLocaleDateString(undefined, this.state.options)
+        return date.toLocaleDateString(undefined)
     }
 
     render() { 
@@ -33,9 +25,6 @@ class HistoryPage extends Component {
             <table className="table table-sm table-striped table-bordered">
                 <thead>
                     <tr className="d-flex">
-                        <th className="col-1" scope="col">
-                            ID
-                        </th>
                         <th className="col-7" scope="col">
                             Termino de Búsqueda
                         </th>
@@ -47,9 +36,6 @@ class HistoryPage extends Component {
                 <tbody>
                     {this.props.searchTerms.map(item =>
                         <tr className="d-flex" key={item.id}>
-                            <td className="col-1">
-                                {item.id}
-                            </td>
                             <td className="col-7">
                                 {item.search_term}
                             </td>
@@ -60,6 +46,7 @@ class HistoryPage extends Component {
                     )}
                 </tbody>
             </table>
+
         );
     }
 }

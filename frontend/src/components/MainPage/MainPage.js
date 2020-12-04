@@ -5,10 +5,11 @@ import './styles.scss'
 const MainPage = () => {
     return (
         <div className="wrapper">
-            <h1>Bienvenide a la asombrosa</h1>
-            <h1>WebApp Buscadora de Tweets</h1>
+            <h1>Bienvenide a la webapp</h1>
+            <h1>Buscadora de Tweets</h1>
             <br />
             <h2>Construida con Django y React</h2>
+            <br />
             <br />
             <div className="d-flex p-2 bd-highlight align-items-center">
                 <img src="https://cdn0.iconfinder.com/data/icons/simpline-mix/64/simpline_11-64.png" />       
@@ -36,7 +37,7 @@ const MainPage = () => {
             </div> 
             <div className="d-flex p-2 bd-highlight align-items-center">
                 <img src="https://cdn0.iconfinder.com/data/icons/simpline-mix/64/simpline_11-64.png" />       
-                <h4>El endpoint de la API es <span className="special-word">/api/history</span></h4>
+                <h4>El endpoint de la API es <span className="special-word">/api/history/</span></h4>
             </div> 
             <div className="d-flex p-2 bd-highlight align-items-center">
                 <img src="https://cdn0.iconfinder.com/data/icons/simpline-mix/64/simpline_11-64.png" />       

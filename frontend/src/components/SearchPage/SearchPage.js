@@ -10,9 +10,13 @@ import './styles.scss'
 
 
 class SearchPage extends Component {
-    state = {
-        term: "",
-        tweets: null
+    constructor(props){
+        super(props)
+        this.state = {
+            term: "",
+            tweets: null
+        }
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     static propTypes = {
@@ -28,12 +32,14 @@ class SearchPage extends Component {
         this.props.addTerm(data)
     }
 
-    handleSubmit() {
+    handleSubmit(e) {
+        e.preventDefault()
+        const data = {
+            search_term: this.state.term
+        }
         axios.defaults.xsrfCookieName = 'csrftoken'
         axios.defaults.xsrfHeaderName = 'X-CSRFToken'
-        axios.post('/search/', {
-            search_term: this.state.term
-        })
+        axios.post('/search/', data)
         .then(res => this.addRecord(res))
             .catch(function (error) {
                 console.log(error);
@@ -49,7 +55,7 @@ class SearchPage extends Component {
     render() { 
         return (
             <>
-            <form onSubmit={() => this.handleSubmit()} >
+            <form onSubmit={this.handleSubmit}>
                 <div className="input-group mb-3">
                     <input onChange={(e) => this.handleChange(e)} type="text" className="form-control" placeholder="Que andas buscando?" />
                     <CSRFToken />
