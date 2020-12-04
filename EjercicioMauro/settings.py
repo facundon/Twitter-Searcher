@@ -22,6 +22,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 't&e49g%+)o==xi+o3kurscczwe)fs&d!f+t$#_qywj*5vi&@3j'
 
+
+TWITTER_API_KEYS = {
+    "consumer_key": 'L34y0Ez744ifincFlkzqLus57',
+    "consumer_secret": 'c99M7ymvB5B74p16aAu70YZPbJaRx0VP48hW2UJoN8KNOs7hr8',
+    "access_token_key": '1104063783234879490-kY0DJFnHf29bT11WdvMspTqbGvHqST',
+    "access_token_secret": 'DrHQf9AztSRwJPmDRXjURkFiLx8YmVM23A96C2Ac0xUwd',
+}
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 

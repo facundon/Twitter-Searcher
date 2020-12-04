@@ -1,4 +1,4 @@
-import { GET_TERMS } from "../actions/types"
+import { GET_TERMS, ADD_TERM } from "../actions/types"
 
 
 const initialState = {
@@ -11,6 +11,11 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 searchTerms: action.payload
+            }
+        case ADD_TERM:
+            return {
+                ...state,
+                searchTerms: [...state.searchTerms, action.payload]
             }
         default:
             return state
