@@ -9,6 +9,7 @@ import HistoryPage from './HistoryPage'
 import SearchPage from './SearchPage'
 import MainPage from './MainPage'
 
+
 class App extends Component {
     render() { 
         return(
@@ -16,11 +17,12 @@ class App extends Component {
                 <Router>
                     <Header />
                     <div className="container">
-                    <Switch>
-                        <Route exact path="/" component={MainPage} />
-                        <Route exact path="/historial" component={HistoryPage} />
-                        <Route exact path="/buscador" component={SearchPage} />
-                    </Switch>   </div>
+                        <Switch>
+                            <Route exact path="/" component={MainPage} />
+                            <Route exact path="/historial" component={HistoryPage} />
+                            <Route exact path="/buscador" component={SearchPage} />
+                        </Switch> 
+                    </div>
                 </Router>
             </Provider>
         )

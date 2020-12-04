@@ -5,6 +5,7 @@ import Media from './Media'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types';
 import { addTerm } from '../../actions/searchTerms'
+import './styles.scss'
 
 
 class SearchPage extends Component {
