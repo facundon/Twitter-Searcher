@@ -30,6 +30,7 @@ TWITTER_API_KEYS = {
     "access_token_secret": 'DrHQf9AztSRwJPmDRXjURkFiLx8YmVM23A96C2Ac0xUwd',
 }
 
+TWITTER_MAX_FETCH = 15
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import CSRFToken from './CSRFToken'
 import Media from './Media'
+import SearchIcon from './SearchIcon'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types';
 import { addTerm } from '../../actions/searchTerms'
@@ -48,11 +49,11 @@ class SearchPage extends Component {
     render() { 
         return (
             <>
-            <form onSubmit={() => this.handleSubmit()}>
+            <form onSubmit={() => this.handleSubmit()} >
                 <div className="input-group mb-3">
                     <input onChange={(e) => this.handleChange(e)} type="text" className="form-control" placeholder="Que andas buscando?" />
                     <CSRFToken />
-                    <button type="submit" className="btn btn-primary">Buscar!</button>
+                    <button type="submit" className="btn btn-primary"><SearchIcon />Buscar!</button>
                 </div>
             </form>
             {this.state.tweets ? <Media>{this.state.tweets}</Media> : null}

@@ -1,0 +1,30 @@
+@import '../styles.scss';
+
+h2 {
+    text-align: center;
+    font-style: italic;
+    color: rgba(67, 219, 168, 0.726);
+
+    @media (max-width: $small-screen) {
+        font-size: 1.4em;
+    }
+}
+
+h1 {
+    text-align: center;
+    font-weight: bolder;
+
+    @media (max-width: $small-screen) {
+        font-size: 1.7em;
+    }
+}
+
+h4 {
+    @media (max-width: $small-screen) {
+        font-size: 1em;
+    }
+}
+
+.special-word {
+    color: rgba(67, 219, 168, 0.726);
+}
