@@ -51,7 +51,7 @@ const MainPage = () => {
                 <img src="https://cdn0.iconfinder.com/data/icons/simpline-mix/64/simpline_11-64.png" />       
                 <h4>La request a la api de Twitter se hace dentro de una vista utilizando <span className="special-word">tweepy</span></h4>
             </div> 
-            <div className="d-flex p-2 bd-highlight justify-content-center">
+            <div className="d-flex p-2 bd-highlight justify-content-center ">
                 <img className="graph" src={graph} />
             </div>
         </div>
