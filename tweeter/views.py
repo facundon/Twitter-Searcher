@@ -10,3 +10,7 @@ def search(request):
         data = ast.literal_eval(str_request)
         tweets = make_search(data.get("search_term"))
     return HttpResponse(tweets)
+
+
+def handle404(request):
+    return render(request, '404.html')

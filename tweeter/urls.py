@@ -1,4 +1,4 @@
-from django.urls import include, path
+from django.urls import include, path, re_path
 from rest_framework import routers
 from . import views
 from . import api
@@ -9,5 +9,6 @@ router.register(r'history', api.HistoryViewSet)
 urlpatterns = [
     path("api/", include(router.urls)),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
-    path("search/", views.search, name="search")
+    path("search/", views.search, name="search"),
+
 ]
