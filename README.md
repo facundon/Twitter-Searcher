@@ -37,3 +37,6 @@ Para ingresar a localhost:8000/admin utilizar las siguientes credenciales:
 
 - user: **admin**
 - pass: **admin**
+
+## Cantidad de Tweets
+En caso de querer editar la cantidad de tweets mostrados editar la variable **TWITTER_MAX_FETCH** dentro de /TwitterSearcher/settings.py
